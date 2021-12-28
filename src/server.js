@@ -50,15 +50,15 @@ app.use("/user", authApi);
 app.get("/", function (req, res) {
   res.json({
     status: "TEST OK",
-    message: "Welcome to ASNSI API, Documentation refer: https://asnsi.io/api-docs/"
+    message: "Welcome to ASNSI API, Documentation refer: https://cl-armor.herokuapp.com/api-docs/"
   });
 });
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get("/", function (req, res) {
   res.json({
-    status: "Test Ok",
-    message: "Welcome to ASNSI API, Documentation refer: https://asnsi.io/api-docs/"
+    status: "TEST OK",
+    message: "Welcome to ASNSI API, Documentation refer: https://cl-armor.herokuapp.com/api-docs/"
   });
 });
 
