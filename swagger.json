@@ -10,7 +10,7 @@
     }
   },
   "host": "https://cl-armor.herokuapp.com",
-  "basePath": "/",
+  "basePath": "/v2",
   "tags": [
     {
       "name": "Phlav API",
@@ -18,7 +18,7 @@
     }
   ],
   "schemes": [
-    "http"
+    "https"
   ],
   "consumes": [
     "application/json"
