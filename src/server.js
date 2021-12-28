@@ -31,11 +31,11 @@ app.use(
 );
 
 app.use(bodyParser.json());
-app.use("/report", apiFilter);
+app.use("/r", apiFilter);
 
 var _require = require("express-openid-connect"),
   auth = _require.auth;
-
+  
 var config = {
   authRequired: false,
   auth0Logout: true,
