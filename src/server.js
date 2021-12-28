@@ -50,7 +50,7 @@ app.use("/user", authApi);
 app.get("/", function (req, res) {
   res.json({
     status: "TEST OK",
-    message: "Welcome to ASNSI API, Documentation refer: https://cl-armor.herokuapp.com/api-docs/"
+    message: "Phlav API : https://cl-armor.herokuapp.com/api-docs/"
   });
 });
 
@@ -58,7 +58,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get("/", function (req, res) {
   res.json({
     status: "TEST OK",
-    message: "Welcome to ASNSI API, Documentation refer: https://cl-armor.herokuapp.com/api-docs/"
+    message: "Phlav API : https://cl-armor.herokuapp.com/api-docs/"
   });
 });
 
