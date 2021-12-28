@@ -49,7 +49,7 @@ app.use(auth(config));
 app.use("/user", authApi);
 app.get("/", function (req, res) {
   res.json({
-    status: "TEST OK",
+    status: "1",
     message: "Phlav API : https://cl-armor.herokuapp.com/api-docs/"
   });
 });
@@ -57,7 +57,7 @@ app.get("/", function (req, res) {
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get("/", function (req, res) {
   res.json({
-    status: "TEST OK",
+    status: "1",
     message: "Phlav API : https://cl-armor.herokuapp.com/api-docs/"
   });
 });
