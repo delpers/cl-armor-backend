@@ -6,27 +6,27 @@ exports.Statuses = {
   },
   contact: {
     title: "Prise de contact",
-    color: "#484D6D",
+    color: "#556fbc",
     key: "contact"
   },
   contact_established: {
     title: "Contact établi",
-    color: "#57a773",
+    color: "#0dac8c",
     key: "contact_established"
   },
   accompagnement: {
     title: "Accompagnement",
-    color: "#173753",
+    color: "#ea9f8a",
     key: "accompagnement"
   },
   judicial_reorientation: {
     title: "Réorientation judiciaire",
-    color: "#173753",
+    color: "#4859c8",
     key: "judicial_reorientation"
   },
   terminated: {
     title: "Terminated",
-    color: "#88292F",
+    color: "#e54c4c",
     key: "terminated"
   }
 };
