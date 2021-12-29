@@ -16,7 +16,7 @@ exports.Statuses = {
   },
   accompagnement: {
     title: "Accompagnement",
-    color: "#ea9f8a",
+    color: "#394b61",
     key: "accompagnement"
   },
   judicial_reorientation: {
