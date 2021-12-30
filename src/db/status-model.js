@@ -25,7 +25,7 @@ exports.Statuses = {
     key: "judicial_reorientation"
   },
   terminated: {
-    title: "Terminé",
+    title: "Fin de la démarche",
     color: "#e54c4c",
     key: "terminated"
   }
