@@ -21,7 +21,7 @@ exports.Statuses = {
   },
   judicial_reorientation: {
     title: "Réorientation judiciaire",
-    color: "#4859c8",
+    color: "#3b5999",
     key: "judicial_reorientation"
   },
   terminated: {
