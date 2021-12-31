@@ -53,6 +53,7 @@ router.post(
         concerning,
         details,
         phone,
+        zipcode,
         ip,
       } = req.body;
 
@@ -64,6 +65,7 @@ router.post(
       urlDefinition.concerning = concerning;
       urlDefinition.details = details;
       urlDefinition.phone = phone;
+      urlDefinition.zipcode = zipcode;
       urlDefinition.ip = ip;
 
       let urlModel = new Url(urlDefinition);

@@ -32,6 +32,9 @@ var urlSchema = new Schema({
   phone: {
     type: String
   },
+  zipcode: {
+    type: String
+  },
   ip: {
     type: String
   },
