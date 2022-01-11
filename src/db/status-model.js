@@ -11,7 +11,7 @@ exports.Statuses = {
   },
   contact_established: {
     title: "Contact établi",
-    color: "green",
+    color: "#00684a",
     key: "contact_established"
   },
   accompagnement: {
