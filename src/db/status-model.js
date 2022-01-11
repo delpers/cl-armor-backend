@@ -20,7 +20,7 @@ exports.Statuses = {
     key: "accompagnement"
   },
   judicial_reorientation: {
-    title: "Réorientation judiciaire",
+    title: "Procédure judiciaire",
     color: "#003a8c",
     key: "judicial_reorientation"
   },
