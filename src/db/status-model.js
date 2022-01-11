@@ -26,7 +26,7 @@ exports.Statuses = {
   },
   terminated: {
     title: "Fin de la démarche",
-    color: "#e54c4c",
+    color: "#a61d24",
     key: "terminated"
   }
 };
