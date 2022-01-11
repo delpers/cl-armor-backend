@@ -6,7 +6,7 @@ exports.Statuses = {
   },
   contact: {
     title: "Prise de contact",
-    color: "#ad002a",
+    color: "#1d2226",
     key: "contact"
   },
   contact_established: {
