@@ -19,13 +19,18 @@ exports.Statuses = {
     color: "#394b61",
     key: "accompagnement"
   },
+  judicial_dpe: {
+    title: "DPE",
+    color: "#003a8c",
+    key: "judicial_dpe"
+  },
   judicial_reorientation: {
     title: "Procédure judiciaire",
     color: "#003a8c",
     key: "judicial_reorientation"
   },
   terminated: {
-    title: "Fin de la démarche",
+    title: "Fin",
     color: "#a61d24",
     key: "terminated"
   }
