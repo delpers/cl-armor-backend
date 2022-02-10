@@ -9,6 +9,7 @@ var Statuses = require("./status-model").Statuses;
 var urlSchema = new Schema({
   lastname: {
     type: String,
+    required: true,
   },
   type: {
     type: String,
@@ -32,12 +33,15 @@ var urlSchema = new Schema({
   },
   details: {
     type: String,
+    required: true,
   },
   phone: {
     type: String,
+    required: true,
   },
   zipcode: {
     type: String,
+    required: true,
   },
   ip: {
     type: String,
