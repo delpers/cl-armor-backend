@@ -17,21 +17,13 @@
       "description": "--"
     }
   ],
-  "schemes": [
-    "https"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
+  "schemes": ["https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
   "paths": {
     "/addUser": {
       "post": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "description": "Create new user in system",
         "parameters": [
           {
@@ -43,9 +35,7 @@
             }
           }
         ],
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "New user is created",
@@ -58,9 +48,7 @@
     },
     "/users": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "summary": "Get all users in system",
         "responses": {
           "200": {
@@ -84,9 +72,7 @@
       ],
       "delete": {
         "summary": "Delete user with given ID",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "responses": {
           "200": {
             "description": "User is deleted",
@@ -98,9 +84,7 @@
       },
       "put": {
         "summary": "Update user with give ID",
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "parameters": [
           {
             "name": "user",
@@ -124,11 +108,7 @@
   },
   "definitions": {
     "User": {
-      "required": [
-        "name",
-        "_id",
-        "companies"
-      ],
+      "required": ["name", "_id", "companies"],
       "properties": {
         "_id": {
           "type": "integer",
@@ -163,10 +143,7 @@
       }
     },
     "updateUser": {
-      "required": [
-        "name",
-        "companies"
-      ],
+      "required": ["name", "companies"],
       "properties": {
         "isPublic": {
           "type": "boolean"

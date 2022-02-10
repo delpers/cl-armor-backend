@@ -31,6 +31,7 @@ function _async_data_filter(fn) {
 }
 
 let router = require("express").Router();
+
 const Url = require("../db/url-model");
 const { check, validationResult } = require("express-validator");
 const ObjectId = require("mongodb").ObjectId;
@@ -44,7 +45,6 @@ router.post(
       if (!errors.isEmpty()) {
         return res.status(422).json({ errors: errors.array() });
       }
-
       const {
         lastname,
         type,
@@ -59,6 +59,7 @@ router.post(
       } = req.body;
 
       let urlDefinition = {};
+
       urlDefinition.lastname = lastname;
       urlDefinition.type = type;
       urlDefinition.child = child;
@@ -102,6 +103,7 @@ router.get(
     };
   })()
 );
+
 router.post("/take-charge/:id", async (req, res) => {
   const id = req.params.id;
 
@@ -138,8 +140,8 @@ router.post("/take-charge/:id", async (req, res) => {
 router.post("/change-status/:id", async (req, res) => {
   const id = req.params.id;
   const { status } = req.body;
-
   const Statuses = require("../db/status-model").Statuses;
+
   var url = await Url.findOne({
     _id: ObjectId(id),
   });
@@ -154,9 +156,11 @@ router.post("/change-status/:id", async (req, res) => {
         },
       }
     );
+
     url = await Url.findOne({
       _id: ObjectId(id),
     });
+
     res.json({
       status: true,
       message: "Status Changed!",
@@ -171,6 +175,7 @@ router.post("/change-status/:id", async (req, res) => {
 
 router.get("/delete/:id", async (req, res) => {
   const id = req.params.id;
+  
   var url = await Url.findOne({
     _id: ObjectId(id),
   });
