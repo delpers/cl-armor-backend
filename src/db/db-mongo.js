@@ -47,9 +47,10 @@ var connectDB = (function () {
             case 0:
               _context.next = 2;
               return mongoose.connect(
-                URI, {
+                URI,
+                {
                   useUnifiedTopology: true,
-                  useNewUrlParser: true
+                  useNewUrlParser: true,
                 },
                 function (err) {
                   if (err) {

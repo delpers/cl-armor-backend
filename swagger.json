@@ -9,7 +9,7 @@
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "host": "https://cl-armor.herokuapp.com",
+  "host": "https://clpsbp.osc-fr1.scalingo.io",
   "basePath": "/v2",
   "tags": [
     {

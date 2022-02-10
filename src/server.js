@@ -40,7 +40,7 @@ var config = {
   authRequired: false,
   auth0Logout: true,
   secret: process.env.AUTH0_SECRET,
-  baseURL: "https://cl-armor.herokuapp.com",
+  baseURL: "https://clpsbp.osc-fr1.scalingo.io",
   clientID: "s2bsIm9J9pCTmZ1xwYkr4VOIqmUgRXPu",
   issuerBaseURL: "https://helpquit.eu.auth0.com"
 }; // auth router attaches /login, /logout, and /callback routes to the baseURL
@@ -50,7 +50,7 @@ app.use("/user", authApi);
 app.get("/", function (req, res) {
   res.json({
     status: "1",
-    message: "Phlav API : https://cl-armor.herokuapp.com/api-docs/"
+    message: "Phlav API : https://clpsbp.osc-fr1.scalingo.io/api-docs/"
   });
 });
 
@@ -58,7 +58,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get("/", function (req, res) {
   res.json({
     status: "1",
-    message: "Phlav API : https://cl-armor.herokuapp.com/api-docs/"
+    message: "Phlav API : https://clpsbp.osc-fr1.scalingo.io/api-docs/"
   });
 });
 

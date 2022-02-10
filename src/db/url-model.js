@@ -8,51 +8,51 @@ var Statuses = require("./status-model").Statuses;
 
 var urlSchema = new Schema({
   lastname: {
-    type: String
+    type: String,
   },
   type: {
     type: String,
-    required: true
+    required: true,
   },
   child: {
     type: String,
-    required: true
+    required: true,
   },
   fromwho: {
     type: String,
-    required: true
+    required: true,
   },
   concerning: {
     type: String,
-    required: true
+    required: true,
   },
   complaint: {
     type: String,
-    required: true
+    required: true,
   },
   details: {
-    type: String
+    type: String,
   },
   phone: {
-    type: String
+    type: String,
   },
   zipcode: {
-    type: String
+    type: String,
   },
   ip: {
-    type: String
+    type: String,
   },
   status: {
     type: Object,
-    default: Statuses.disponible
+    default: Statuses.disponible,
   },
   assigned: {
     type: Boolean,
-    default: false
+    default: false,
   },
   assigned_to: {
-    type: Object
-  }
+    type: Object,
+  },
 });
 
 var Url = mongoose.model("type", urlSchema);

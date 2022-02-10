@@ -89,7 +89,7 @@ router.post(
 );
 
 router.get(
-  "c",
+  "/q/95LJyIXmqRflrygAC2ADwtgdqxSiUIGVydHaum9hnL/t2OkcSU8S8oymVGfI0m",
   (() => {
     var ref = _async_data_filter(function* (req, res) {
       const filter = {};
