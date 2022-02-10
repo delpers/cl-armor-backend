@@ -26,6 +26,10 @@ var urlSchema = new Schema({
     type: String,
     required: true
   },
+  complaint: {
+    type: String,
+    required: true
+  },
   details: {
     type: String
   },
