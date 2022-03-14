@@ -50,7 +50,7 @@ app.use("/user", authApi);
 app.get("/", function (req, res) {
   res.json({
     status: "1",
-    message: "Phlav API : https://clpsbp.osc-fr1.scalingo.io/api-docs/"
+    message: "Phlav API : https://hlpt-psbp.herokuapp.com/api-docs/"
   });
 });
 
@@ -58,7 +58,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get("/", function (req, res) {
   res.json({
     status: "1",
-    message: "Phlav API : https://clpsbp.osc-fr1.scalingo.io/api-docs/"
+    message: "Phlav API : https://hlpt-psbp.herokuapp.com/api-docs/"
   });
 });
 
