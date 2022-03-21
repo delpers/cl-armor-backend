@@ -45,20 +45,8 @@ router.post(
       if (!errors.isEmpty()) {
         return res.status(422).json({ errors: errors.array() });
       }
-      const {
-        lastname,
-        type,
-        child,
-        fromwho,
-        concerning,
-        complaint,
-        details,
-        phone,
-        zipcode,
-        ip,
-        assigned,
-        assigned_to,
-      } = req.body;
+      const { lastname, type, child, fromwho, concerning, complaint, details, phone, ip, assigned, assigned_to } =
+        req.body;
 
       let urlDefinition = {};
 
@@ -70,7 +58,6 @@ router.post(
       urlDefinition.complaint = complaint;
       urlDefinition.details = details;
       urlDefinition.phone = phone;
-      urlDefinition.zipcode = zipcode;
       urlDefinition.assigned = assigned;
       urlDefinition.assigned_to = assigned_to;
       urlDefinition.ip = ip;
@@ -90,7 +77,7 @@ router.post(
             {
               $set: {
                 assigned: true,
-                assigned_to: req.body.user,
+                assigned_to: req.oidc.user,
               },
             }
           );
