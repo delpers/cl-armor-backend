@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 function _async_data_filter(fn) {
   return function () {
@@ -17,28 +17,28 @@ function _async_data_filter(fn) {
         } else {
           return Promise.resolve(value).then(
             function (value) {
-              return step("next", value);
+              return step('next', value);
             },
             function (err) {
-              return step("throw", err);
+              return step('throw', err);
             }
           );
         }
       }
-      return step("next");
+      return step('next');
     });
   };
 }
 
-let router = require("express").Router();
+let router = require('express').Router();
 
-const Url = require("../db/url-model");
-const { check, validationResult } = require("express-validator");
-const ObjectId = require("mongodb").ObjectId;
+const Url = require('../db/url-model');
+const { check, validationResult } = require('express-validator');
+const ObjectId = require('mongodb').ObjectId;
 
 router.post(
-  "/",
-  [check("type").not().isEmpty()],
+  '/',
+  [check('type').not().isEmpty()],
   (() => {
     var ref = _async_data_filter(function* (req, res) {
       const errors = validationResult(req);
@@ -56,6 +56,8 @@ router.post(
         phone,
         zipcode,
         ip,
+        assigned,
+        assigned_to,
       } = req.body;
 
       let urlDefinition = {};
@@ -69,6 +71,8 @@ router.post(
       urlDefinition.details = details;
       urlDefinition.phone = phone;
       urlDefinition.zipcode = zipcode;
+      urlDefinition.assigned = assigned;
+      urlDefinition.assigned_to = assigned_to;
       urlDefinition.ip = ip;
 
       let urlModel = new Url(urlDefinition);
@@ -76,7 +80,7 @@ router.post(
 
       yield urlModel.save(function (err) {
         if (err) {
-          res.json("err");
+          res.json('err');
         } else {
           res.json(urlModel);
         }
@@ -90,7 +94,7 @@ router.post(
 );
 
 router.get(
-  "/q/95LJyIXmqRflrygAC2ADwtgdqxSiUIGVydHaum9hnL/t2OkcSU8S8oymVGfI0m",
+  '/q/95LJyIXmqRflrygAC2ADwtgdqxSiUIGVydHaum9hnL/t2OkcSU8S8oymVGfI0m',
   (() => {
     var ref = _async_data_filter(function* (req, res) {
       const filter = {};
@@ -104,7 +108,7 @@ router.get(
   })()
 );
 
-router.post("/take-charge/:id", async (req, res) => {
+router.post('/take-charge/:id', async (req, res) => {
   const id = req.params.id;
 
   var url = await Url.findOne({
@@ -127,20 +131,20 @@ router.post("/take-charge/:id", async (req, res) => {
     });
     res.json({
       status: true,
-      message: "Success!",
+      message: 'Success!',
     });
   } else {
     res.json({
       status: false,
-      message: "Report not found!",
+      message: 'Report not found!',
     });
   }
 });
 
-router.post("/change-status/:id", async (req, res) => {
+router.post('/change-status/:id', async (req, res) => {
   const id = req.params.id;
   const { status } = req.body;
-  const Statuses = require("../db/status-model").Statuses;
+  const Statuses = require('../db/status-model').Statuses;
 
   var url = await Url.findOne({
     _id: ObjectId(id),
@@ -163,19 +167,19 @@ router.post("/change-status/:id", async (req, res) => {
 
     res.json({
       status: true,
-      message: "Status Changed!",
+      message: 'Status Changed!',
     });
   } else {
     res.json({
       status: false,
-      message: "Report not found!",
+      message: 'Report not found!',
     });
   }
 });
 
-router.get("/delete/:id", async (req, res) => {
+router.get('/delete/:id', async (req, res) => {
   const id = req.params.id;
-  
+
   var url = await Url.findOne({
     _id: ObjectId(id),
   });
@@ -185,12 +189,12 @@ router.get("/delete/:id", async (req, res) => {
     });
     res.json({
       status: true,
-      message: "Deleted",
+      message: 'Deleted',
     });
   } else {
     res.json({
       status: false,
-      message: "Report not found!",
+      message: 'Report not found!',
     });
   }
 });
