@@ -76,12 +76,24 @@ router.post(
       urlDefinition.ip = ip;
 
       let urlModel = new Url(urlDefinition);
+
       console.log(urlModel);
 
       yield urlModel.save(function (err) {
         if (err) {
           res.json('err');
         } else {
+          await Url.findOneAndUpdate(
+            {
+              _id: urlModel._id,
+            },
+            {
+              $set: {
+                assigned: true,
+                assigned_to: req.body.user,
+              },
+            }
+          );
           res.json(urlModel);
         }
       });
