@@ -79,7 +79,7 @@ router.post(
 
       console.log(urlModel);
 
-      yield urlModel.save(function async(err) {
+      yield urlModel.save(async function (err) {
         if (err) {
           res.json('err');
         } else {
