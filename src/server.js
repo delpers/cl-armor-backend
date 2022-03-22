@@ -61,7 +61,9 @@ app.get("/", function (req, res) {
     message: "Phlav API : https://psbp-1.osc-fr1.scalingo.io/api-docs/"
   });
 });
-
+app.post("/create", function(req,res){
+  console.log(req.body);
+})
 app.listen(port, function () {
   console.log("App upload in port: " + port);
 });
