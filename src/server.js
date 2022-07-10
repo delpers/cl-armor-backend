@@ -40,7 +40,7 @@ var config = {
   authRequired: false,
   auth0Logout: true,
   secret: process.env.AUTH0_SECRET,
-  baseURL: "https://clpsbp.osc-fr1.scalingo.io",
+  baseURL: "https://hpspsb.osc-fr1.scalingo.io",
   clientID: "s2bsIm9J9pCTmZ1xwYkr4VOIqmUgRXPu",
   issuerBaseURL: "https://helpquit.eu.auth0.com"
 }; // auth router attaches /login, /logout, and /callback routes to the baseURL
