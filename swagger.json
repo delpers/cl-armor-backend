@@ -9,7 +9,7 @@
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "host": "https://hpspsb.osc-fr1.scalingo.io",
+  "host": "https://admin.helpquit.io",
   "basePath": "/v2",
   "tags": [
     {
