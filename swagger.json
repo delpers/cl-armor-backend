@@ -9,7 +9,7 @@
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "host": "http://localhost:8080/",
+  "host": "upcsbserver.osc-fr1.scalingo.io",
   "basePath": "/v2",
   "tags": [
     {

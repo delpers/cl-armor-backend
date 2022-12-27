@@ -50,7 +50,7 @@ app.use("/user", authApi);
 app.get("/", function (req, res) {
   res.json({
     status: "1",
-    message: "Phlav API : https://localhost:8080/api-docs/"
+    message: "Phlav API : https://upcsbserver.osc-fr1.scalingo.io/api-docs/"
   });
 });
 
@@ -58,7 +58,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.get("/", function (req, res) {
   res.json({
     status: "1",
-    message: "Phlav API : https://localhost:8080/api-docs/"
+    message: "Phlav API : https://upcsbserver.osc-fr1.scalingo.io/api-docs/"
   });
 });
 app.post("/create", function(req,res){
