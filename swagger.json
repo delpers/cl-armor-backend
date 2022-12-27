@@ -9,7 +9,7 @@
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "host": "https://admin.helpquit.io",
+  "host": "http://localhost:3000/",
   "basePath": "/v2",
   "tags": [
     {
