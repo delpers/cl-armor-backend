@@ -8,9 +8,9 @@
     "start": "nodemon src/server.js --exec babel-node --presets babel-preset-env",
     "lint": "eslint src/js"
   },
-  "engines" : { 
-    "npm" : "8.5.4",
-    "node" : "16.13.2"
+  "engines": {
+    "npm": "8.5.4",
+    "node": "16.13.2"
   },
   "author": "helpquit.io",
   "license": "ISC",

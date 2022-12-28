@@ -45,7 +45,7 @@ router.post(
       if (!errors.isEmpty()) {
         return res.status(422).json({ errors: errors.array() });
       }
-      const { lastname, type, child, fromwho, concerning, complaint, details, phone, ip, assigned, assigned_to } =
+      const { zipcode, lastname, type, child, fromwho, concerning, complaint, details, phone, ip, assigned, assigned_to } =
         req.body;
 
       let urlDefinition = {};
@@ -61,6 +61,7 @@ router.post(
       urlDefinition.assigned = assigned;
       urlDefinition.assigned_to = assigned_to;
       urlDefinition.ip = ip;
+      urlDefinition.zipcode = zipcode;
 
       let urlModel = new Url(urlDefinition);
 
@@ -68,7 +69,9 @@ router.post(
 
       yield urlModel.save(async function (err) {
         if (err) {
-          res.json('err');
+          // res.json(err);
+          console.log(err);
+
         } else {
           await Url.findOneAndUpdate(
             {
@@ -77,7 +80,7 @@ router.post(
             {
               $set: {
                 assigned: true,
-                assigned_to: req.oidc.user,
+                assigned_to: null,
               },
             }
           );
