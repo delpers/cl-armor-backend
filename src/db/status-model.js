@@ -14,23 +14,23 @@ exports.Statuses = {
     color: "#00684a",
     key: "contact_established",
   },
-  accompagnement: {
-    title: "Accompagnement",
+  smdp: {
+    title: "Suivi médical à distance",
     color: "#394b61",
-    key: "accompagnement",
+    key: "smd",
   },
-  judicial_dpe: {
-    title: "DPE",
+  inter: {
+    title: "Intervention",
     color: "#003a8c",
-    key: "judicial_dpe",
+    key: "inter",
   },
-  judicial_reorientation: {
-    title: "Procédure judiciaire",
+  on_road: {
+    title: "Déplacement",
     color: "#003a8c",
-    key: "judicial_reorientation",
+    key: "on_road",
   },
   terminated: {
-    title: "Fin",
+    title: "Terminée",
     color: "#a61d24",
     key: "terminated",
   },
