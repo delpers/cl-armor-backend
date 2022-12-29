@@ -45,14 +45,14 @@ router.post(
       if (!errors.isEmpty()) {
         return res.status(422).json({ errors: errors.array() });
       }
-      const { zipcode, lastname, type, child, year, concerning, complaint, details, phone, ip, assigned, assigned_to } =
+      const { zipcode, lastname, type, typeofevent, year, concerning, complaint, details, phone, ip, assigned, assigned_to } =
         req.body;
 
       let urlDefinition = {};
 
       urlDefinition.lastname = lastname;
       urlDefinition.type = type;
-      urlDefinition.child = child;
+      urlDefinition.typeofevent = typeofevent;
       urlDefinition.year = year;
       urlDefinition.concerning = concerning;
       urlDefinition.complaint = complaint;

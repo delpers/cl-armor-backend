@@ -15,7 +15,7 @@ var urlSchema = new Schema({
     type: String,
     required: true,
   },
-  child: {
+  typeofevent: {
     type: String,
     required: true,
   },
