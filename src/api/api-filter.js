@@ -45,7 +45,7 @@ router.post(
       if (!errors.isEmpty()) {
         return res.status(422).json({ errors: errors.array() });
       }
-      const { zipcode, lastname, type, child, fromwho, concerning, complaint, details, phone, ip, assigned, assigned_to } =
+      const { zipcode, lastname, type, child, year, concerning, complaint, details, phone, ip, assigned, assigned_to } =
         req.body;
 
       let urlDefinition = {};
@@ -53,13 +53,13 @@ router.post(
       urlDefinition.lastname = lastname;
       urlDefinition.type = type;
       urlDefinition.child = child;
-      urlDefinition.fromwho = fromwho;
+      urlDefinition.year = year;
       urlDefinition.concerning = concerning;
       urlDefinition.complaint = complaint;
       urlDefinition.details = details;
       urlDefinition.phone = phone;
       urlDefinition.assigned = assigned;
-      urlDefinition.assigned_to = assigned_to;
+      urlDefinition.assigned_to = assigned_to & null;
       urlDefinition.ip = ip;
       urlDefinition.zipcode = zipcode;
 
@@ -124,7 +124,7 @@ router.post('/take-charge/:id', async (req, res) => {
       {
         $set: {
           assigned: true,
-          assigned_to: req.body.user,
+          assigned_to: req.body.user        && null,
         },
       }
     );

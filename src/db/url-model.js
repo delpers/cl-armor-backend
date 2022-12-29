@@ -19,7 +19,7 @@ var urlSchema = new Schema({
     type: String,
     required: true,
   },
-  fromwho: {
+  year: {
     type: String,
     required: true,
   },
