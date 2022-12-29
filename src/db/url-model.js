@@ -27,7 +27,7 @@ var urlSchema = new Schema({
     type: String,
     required: true,
   },
-  complaint: {
+  pain: {
     type: String,
     required: true,
   },
